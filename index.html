@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeddyVerse — Interactive Teddy Day Experience</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🧸 TeddyVerse</h1>
+    <p>Interactive Teddy Day world powered by Data Structures & Algorithms.</p>
+  </header>
+
+  <main>
+    <section class="card" id="story-section">
+      <h2>Choose-your-love-story (Graph + DFS/BFS)</h2>
+      <p id="story-text"></p>
+      <div id="choices"></div>
+      <div class="inline-actions">
+        <button id="reset-story">Reset Story</button>
+        <button id="best-ending">Find shortest path to best ending (BFS)</button>
+      </div>
+      <small id="story-meta"></small>
+    </section>
+
+    <section class="card" id="unlock-section">
+      <h2>Unlock Surprises in Order (Topological Sort)</h2>
+      <button id="start-unlock">Compute Unlock Order (Kahn)</button>
+      <ol id="unlock-order"></ol>
+    </section>
+
+    <section class="card" id="quotes-section">
+      <h2>Fast Quote Search (Trie) + Auto-correct Name (Edit Distance)</h2>
+      <label>Search quote prefix:
+        <input id="quote-prefix" placeholder="Type fore..." />
+      </label>
+      <ul id="quote-suggestions"></ul>
+      <label>Type her name:
+        <input id="name-input" placeholder="Try Vini" />
+      </label>
+      <p id="name-suggestion"></p>
+    </section>
+
+    <section class="card" id="maze-section">
+      <h2>Teddy Maze (Grid BFS shortest path)</h2>
+      <button id="solve-maze">Solve Maze</button>
+      <pre id="maze-output"></pre>
+    </section>
+
+    <section class="card" id="leaderboard-section">
+      <h2>Leaderboard (Min-Heap Top-K)</h2>
+      <div class="inline-actions">
+        <input id="score-name" placeholder="Player" />
+        <input id="score-time" type="number" placeholder="Time (sec)" />
+        <button id="add-score">Add Score</button>
+      </div>
+      <ol id="leaderboard"></ol>
+    </section>
+
+    <section class="card" id="assistant-section">
+      <h2>Chat-like Teddy Assistant (Hash map indexing)</h2>
+      <div class="inline-actions">
+        <button data-mood="sweet">Sweet quote</button>
+        <button data-mood="funny">Funny quote</button>
+        <button data-mood="emotional">Emotional quote</button>
+      </div>
+      <p id="assistant-reply"></p>
+    </section>
+
+    <section class="card" id="surprise-section">
+      <h2>Surprise Box Randomizer (Fisher–Yates)</h2>
+      <button id="draw-surprise">Open Surprise Box</button>
+      <p id="surprise-result"></p>
+    </section>
+
+    <section class="card" id="achievement-section">
+      <h2>Achievement System (Bitmask)</h2>
+      <div class="inline-actions">
+        <button data-item="0">Found Hidden Teddy #1</button>
+        <button data-item="1">Found Hidden Teddy #2</button>
+        <button data-item="2">Found Hidden Teddy #3</button>
+      </div>
+      <p id="achievement-status"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
